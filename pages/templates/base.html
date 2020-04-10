@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'btre/css/all.css'%}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'btre/css/bootstrap.css'%}">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'btre/css/style.css'%}">
+    <!-- Light Box -->
+    <link rel="stylesheet" href="{% static 'btre/css/lightbox.min.css'%}">
+    <title>BT-Real Estate {% block title %} {% endblock title %}</title>
+</head>
+
+<body>
+    <!-- Topbar included-->
+    {% include 'partials/_topbar.html' %}
+
+    <!-- Navbar included -->
+    {% include 'partials/_navbar.html' %}
+
+    <!--Main Content-->
+    {%block content%}
+    {%endblock%}
+
+    <!-- Footer included -->
+    {% include 'partials/_footer.html' %}
+</body>
+
+<script src="{% static 'btre/js/jquery-3.3.1.min.js'%} "></script>
+<script src="{% static 'btre/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'btre/js/lightbox.min.js' %}"></script>
+<script src="{% static 'btre/js/main.js' %}"></script>
+
+</html>

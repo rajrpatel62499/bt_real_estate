@@ -1,0 +1,17 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block title %} BT Real Estate | Admin {% endblock title %}
+
+{% block branding %}
+<h1 id='heading'>
+    <img src="{% static 'btre/img/logo.png' %}" alt="BT Real Estate Logo" height="50px" width="70px"
+        class="brand_img" />
+    Admin Area
+</h1>
+{% block extrastyle %}
+
+<link rel="stylesheet" href="{% static 'btre/css/admin.css'%}">
+{% endblock extrastyle %}
+
+{% endblock branding %}
