@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Contact
 from django.core.mail import send_mail
-
+from django.conf import settings
 # Create your views here.
-
+import os
 
 def contact(request):
     if request.method == "POST":
@@ -63,7 +63,7 @@ def contact(request):
 
             Sign in to btre admin area to more info
             """,
-            from_email="tonystark62499@gmail.com",
+            from_email="teststark62499@gmail.com",
             recipient_list=[realtor_email, "jerrico62499@gmail.com"],
             fail_silently=False,
         )
